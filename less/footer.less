@@ -1,0 +1,42 @@
+.index-footer {
+  padding-top: 50px;
+
+  .wrap-inner.map {
+    padding: 0;
+  }
+}
+
+.call-us {
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+
+.contacts__item {
+  padding-bottom: 25px;
+}
+
+.contact__key {
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 9px;
+}
+
+.contact__value {
+  text-decoration: none;
+  color: @contact-color;
+  font-size: 24px;
+}
+
+.map {
+  position: relative;
+
+  &:before {
+    content: " ";
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    background: url("../img/footer-triangle.svg") center top no-repeat;
+    position: absolute;
+    z-index: 11;
+  }
+}

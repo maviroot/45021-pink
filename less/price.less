@@ -1,0 +1,68 @@
+.price {
+  padding-top: 65px;
+  background: @bg-color--tips;
+
+  .wrap-inner {
+    padding: 0;
+  }
+}
+
+.tarif {
+  //padding-bottom: 50px;
+  display: flex;
+  background: @color--base;
+}
+
+.tarif__desc {
+  background-color: #283645;
+  border: 1px solid @border-color;
+  border-bottom: 0;
+  //box-sizing: border-box;
+}
+
+.tarif__name {
+  padding: 0 92px;
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @color--base;
+}
+
+.tarif__price {
+  padding-bottom: 20px;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @color--base;
+}
+
+.tarif__option {
+  padding: 24px;
+  padding-right: 20px;
+  border: 1px solid @border-color;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+
+  &:after {
+    content: " ";
+    background: url("../img/none-active_option.png") 0 0 no-repeat;
+    width: 26px;
+    height: 26px;
+  }
+
+  &--active {
+    &:after {
+      background: url("../img/active_option.png") 0 0 no-repeat;
+      width: 29px;
+      height: 26px;
+    }
+  }
+}
+
+.price-slider {
+  background: @bg-color--tips;
+  padding: 40px 0;
+}
