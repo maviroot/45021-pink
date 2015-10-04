@@ -1,3 +1,5 @@
+/*  Footer Index  */
+
 .index-footer {
   padding-top: 50px;
 
@@ -23,7 +25,7 @@
 
 .contact__value {
   text-decoration: none;
-  color: @contact-color;
+  color: @warning-color;
   font-size: 24px;
 }
 
@@ -38,5 +40,62 @@
     background: url("../img/footer-triangle.svg") center top no-repeat;
     position: absolute;
     z-index: 11;
+  }
+}
+
+/*  Footer other  */
+
+.footer-logo {
+  width: 145px;
+  height: 40px;
+  margin-bottom: 40px;
+  display: inline-block;
+  background: url(../img/footer-logo.png) 50% 50% no-repeat;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 35px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 51px;
+  height: 51px;
+  border: 3px solid @border-color;
+  border-radius: 50%;
+  margin-right: 12px;
+
+
+  &--twitter {
+    background: url("../img/icon-twitter.png") 50% 50% no-repeat;
+  }
+
+  &--facebook {
+    background: url("../img/icon-facebook.png") 50% 50% no-repeat;
+  }
+
+  &--youtube {
+    background: url("../img/icon-youtube.png") 50% 50% no-repeat;
+    margin-right: 0;
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 46px;
+}
+
+.copyright-link {
+  width: 27px;
+  height: 34px;
+  display: inline-block;
+
+  &--htmlacademy {
+    padding-left: 15px;
+    background: url("../img/icon-htmlacademy.png") 50% 50% no-repeat;
   }
 }
