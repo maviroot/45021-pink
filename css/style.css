@@ -6,10 +6,11 @@
 }
 .wrap-inner {
   padding: 0 20px;
+  max-width: 320px;
+  min-width: auto;
+  margin: 0 auto;
 }
 .page-wrap {
-  max-width: 320px;
-  margin: 0 auto;
   text-align: center;
   overflow: hidden;
 }
@@ -77,7 +78,7 @@ ul {
   font-weight: 300;
 }
 .intro {
-  background: url("../img/intro-iphone.png") 95% 130% no-repeat;
+  background: url("../img/intro-iphone.png") 45% 130% no-repeat;
 }
 .intro__title {
   padding: 25px 27px 320px;
@@ -203,6 +204,8 @@ ul {
 }
 .tarif {
   display: flex;
+}
+.tarif__item {
   background: #ffffff;
 }
 .tarif__desc {
