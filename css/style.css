@@ -6,9 +6,8 @@
 }
 .wrap-inner {
   padding: 0 20px;
-  max-width: 320px;
-  min-width: auto;
   margin: 0 auto;
+  max-width: 320px;
 }
 .page-wrap {
   text-align: center;
