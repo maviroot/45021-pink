@@ -1,7 +1,7 @@
 .wrap-inner {
   padding: 0 20px;
   margin:  0 auto;
-  max-width: 320px;
+  //max-width: 320px;
 }
 
 .page-wrap {
@@ -16,6 +16,10 @@ html {
   line-height: 24px;
 }
 
+body {
+  min-width: 320px;
+}
+
 p,h1 {
   margin: 0;
 }
@@ -23,4 +27,12 @@ p,h1 {
 ul {
   margin: 0;
   padding: 0;
+}
+
+// For tablet
+
+@media (min-width:@screen_md) {
+  .wrap-inner {
+    padding: 0 40px;
+  }  
 }

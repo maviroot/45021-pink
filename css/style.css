@@ -7,7 +7,6 @@
 .wrap-inner {
   padding: 0 20px;
   margin: 0 auto;
-  max-width: 320px;
 }
 .page-wrap {
   text-align: center;
@@ -19,6 +18,9 @@ html {
   font-weight: 300;
   line-height: 24px;
 }
+body {
+  min-width: 320px;
+}
 p,
 h1 {
   margin: 0;
@@ -26,6 +28,11 @@ h1 {
 ul {
   margin: 0;
   padding: 0;
+}
+@media (min-width: 700px) {
+  .wrap-inner {
+    padding: 0 40px;
+  }
 }
 .slider__control {
   display: flex;
@@ -45,20 +52,18 @@ ul {
 .slider__toggle--active {
   border: 3px solid #283645;
 }
-.background-container {
-  background: url("../img/header-bg.jpg") center no-repeat;
-  background-size: cover;
-}
 .page-header {
   background: rgba(0, 0, 0, 0.3);
   padding: 21px 0;
   position: fixed;
   top: 0;
+  z-index: 1000;
   width: 100%;
 }
 .page-header .wrap-inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .logo-link {
   background: url("../img/head-logo.png") 0 0 no-repeat;
@@ -73,29 +78,61 @@ ul {
 .top-menu {
   display: none;
 }
-.main-title {
-  padding-top: 36px;
-  padding-bottom: 45px;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 300;
+@media (min-width: 700px) {
+  .logo-link {
+    background: url("../img/head-logo_md.png") 0 0 no-repeat;
+    width: 145px;
+    height: 40px;
+  }
+  .page-header {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
 }
 .intro {
   padding-top: 90px;
-  background: url("../img/intro-iphone.png") 45% 110% no-repeat;
+  background: url("../img/header-bg.jpg") center no-repeat;
+  background-size: cover;
+}
+.intro .wrap-inner {
+  background: url("../img/intro-iphone.png") no-repeat;
+  background-position: 50% bottom;
 }
 .intro__title {
   padding: 25px 27px 320px;
   color: #ffffff;
   font-size: 24px;
 }
+@media (min-width: 700px) {
+  .intro {
+    display: flex;
+    background: none;
+  }
+  .intro .wrap-inner {
+    background: none;
+  }
+  .intro__title {
+    padding: 100px 0 0;
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 48px;
+    padding-right: 370px;
+    padding-left: 40px;
+  }
+  .wrap {
+    background: url("../img/iphone-6.png") calc(90%) bottom no-repeat, url("../img/header-bg.jpg") center no-repeat;
+    background-size: auto, cover;
+  }
+}
 .download {
   background: #1d2631;
   color: #ffffff;
   padding-top: 28px;
+  padding-bottom: 35px;
 }
 .btn {
-  display: block;
+  display: inline-block;
+  width: 203px;
   padding: 14px 35px 17px;
   border: 3px solid white;
   border-radius: 40px;
@@ -129,8 +166,22 @@ ul {
   width: 44px;
   height: 42px;
 }
-.download__desc {
-  padding-bottom: 35px;
+@media (min-width: 700px) {
+  .download {
+    padding-right: 325px;
+    padding-top: 35px;
+    z-index: 2;
+    background: none;
+    padding-bottom: 110px;
+  }
+  .platform {
+    padding-top: 45px;
+    padding-bottom: 40px;
+  }
+  .download__desc {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 .carrot {
   padding: 45px 38px 30px;

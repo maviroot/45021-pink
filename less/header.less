@@ -1,18 +1,15 @@
-.background-container {
-  background: url("../img/header-bg.jpg") center no-repeat;
-  background-size: cover;
-}
-
 .page-header {
   background: rgba(0, 0, 0, .3);
   padding: 21px 0;
   position: fixed;
   top: 0;
+  z-index: 1000;
   width:100%;
 
   .wrap-inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;  
   }
 }
 
@@ -34,10 +31,17 @@
   display: none;
 }
 
-.main-title {
-  padding-top: 36px;
-  padding-bottom: 45px;
-  color: @color--base;
-  font-size: 24px;
-  font-weight: 300;
+//  For tablet
+
+@media (min-width: @screen_md) {
+  .logo-link {
+    background: url("../img/head-logo_md.png") 0 0 no-repeat;
+    width: 145px;
+    height: 40px;
+  }
+
+  .page-header {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
 }
