@@ -3,11 +3,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-lintspaces');
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-postcss');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -19,6 +19,38 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    autoprefixer: {
+      options: {
+      // Task-specific options go here.
+        browsers: ['last 5 versions', 'ie 8', 'ie 9'] 
+      },
+      your_target: {
+      // Target-specific file lists and/or options go here. 
+      },
+    },
+
+    postcss: {
+    options: {
+      map: true, // inline sourcemaps
+
+      // or
+      map: {
+          inline: false, // save all sourcemaps as separate files...
+          annotation: 'dist/css/maps/' // ...to the specified directory
+      },
+
+      processors: [
+        require('pixrem')(), // add fallbacks for rem units
+        require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+        require('cssnano')() // minify the result
+      ]
+    },
+    dist: {
+      src: 'css/*.css'
+    }
+  },
+
     
     watch: {
       styles: {
@@ -54,14 +86,6 @@ module.exports = function(grunt) {
       }
     },
 
-    sass: {
-      style: {
-        files: {
-          'css/style.css': 'sass/style.scss'
-        }
-      }
-    },
-
     lintspaces: {
       test: {
         src: [
@@ -73,12 +97,6 @@ module.exports = function(grunt) {
         options: {
           editorconfig: '.editorconfig'
         }
-      }
-    },
-
-    githooks: {
-      test: {
-        'pre-commit': 'lintspaces:test',
       }
     },
 
@@ -106,8 +124,9 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('test', ['lintspaces:test']);
+  grunt.registerTask('default', ['postcss:dist']);
 
-  if (grunt.file.exists(__dirname, 'less', 'style.less')) {
+  if (grunt.file.exists(__dirname, 'less', 'style.less', 'autoprefixer')) {
     grunt.registerTask('gosha', ['less:style', 'copy:gosha', 'clean:gosha']);
   } else if (grunt.file.exists(__dirname, 'sass', 'style.scss')) {
     grunt.registerTask('gosha', ['sass:style', 'copy:gosha', 'clean:gosha']);
