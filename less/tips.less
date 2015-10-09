@@ -30,12 +30,28 @@
 
 @media (min-width:@screen_md) {
   .tips {
-    padding-top: 25px;
+    padding-top: 0;
+    position: relative;
+
+    &:after {
+      //display: none;
+      position: absolute;
+      bottom: 0;
+      width: 268px;
+      height: 481px;
+      margin-left: 40px;
+      background: url("../img/tips-iphone_md.png") 0 0 no-repeat;
+    }
 
     .wrap-inner {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
     }
+  }
+
+  .tips__item {
+    text-align: left;
+    width: 310px;
   }
 }
