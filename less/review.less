@@ -1,5 +1,5 @@
 .review {
-  padding-top: 50px;
+  padding-top: 30px;
 
   &:after {
     content: " ";
@@ -12,11 +12,11 @@
 }
 
 .review__item {
-  //padding-top: 50px;
   display: none;
   
   &:first-child {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -24,14 +24,40 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
-  padding-bottom: 25px;
+  order: 1;
+  padding-bottom: 10px;
+}
+
+.review__author-desc {
+  display: none;
+  font-weight: 400;
+  order: 2;
+  color: rgb(40, 54, 69);
 }
 
 .review__comment {
+  padding-bottom: 40px;
   font-weight: 400;
   line-height: 30px;
+  order: 3;
 }
 
-.review-slider {
-  padding-top: 40px;
+//  For Tablet
+
+@media (min-width:@screen_md) {
+   .review__comment {
+    font-size: 18px;
+    order: 1;
+  }
+  
+  .review__author {
+    font-size: 20px;
+    padding-bottom: 5px;
+    order: 2;
+  }
+  
+  .review__author-desc {
+    display: block;
+    order: 3;
+  }
 }
