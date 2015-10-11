@@ -1,6 +1,6 @@
 /*  Footer Index  */
 
-.index-footer {
+.feedback {
   padding-top: 50px;
 
   .wrap-inner.map {
@@ -11,6 +11,16 @@
 .call-us {
   font-size: 24px;
   padding-bottom: 40px;
+}
+
+.contacts {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .contacts__item {
@@ -97,5 +107,57 @@
   &--htmlacademy {
     padding-left: 15px;
     background: url("../img/icon-htmlacademy.png") 50% 50% no-repeat;
+  }
+}
+
+//  For Tablet
+
+@media (min-width:@screen_md) {
+  .call-us {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  
+  .contacts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .contacts__item {
+    width: 300px;
+  }
+  
+  .page-footer {
+    padding: 36px 0;
+    
+    .footer-logo {
+      margin-bottom: 0;
+    }
+    
+    .social {
+      padding-bottom: 0;
+    }
+    
+    .copyright {
+      padding-bottom: 0;
+    }
+    
+    .wrap-inner {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+
+
+table {
+  td {
+    border: 2px solid #ccc;
   }
 }
