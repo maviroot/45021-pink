@@ -320,9 +320,6 @@ ul {
   padding-top: 65px;
   background: #f2f2f2;
 }
-.price .wrap-inner {
-  padding: 0;
-}
 .tarif {
   display: flex;
   justify-content: center;
@@ -366,6 +363,7 @@ ul {
   height: 26px;
 }
 .tarif__option--active:after {
+  content: " ";
   background: url("../img/active_option.png") 0 0 no-repeat;
   width: 29px;
   height: 26px;
@@ -373,6 +371,60 @@ ul {
 .price-slider {
   background: #f2f2f2;
   padding: 40px 0;
+}
+.tarif-table {
+  display: none;
+}
+.tarif-table tr {
+  height: 49px;
+  background: #ffffff;
+}
+.tarif-table td {
+  border: 1px solid #ccc;
+}
+.tarif-table .col-1 {
+  color: #283645;
+  font-weight: 400;
+  line-height: 30px;
+}
+.tarif-table .row-1 {
+  color: #ffffff;
+  background: #283645;
+}
+.tarif-table .row-1 td {
+  padding: 12px 0 7px;
+  width: 156px;
+}
+.tarif-table .row-1 .col-1 {
+  visibility: hidden;
+}
+.tarif-table .row-1 .tarif-name {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.tarif-table .row-1 .tarif-cost {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+}
+.price__option {
+  background: url(../img/none-active_option.png) 50% 50% no-repeat;
+}
+.price__option--active {
+  background: url(../img/active_option.png) 50% 50% no-repeat;
+}
+@media (min-width: 700px) {
+  .tarif-table {
+    display: inline-table;
+  }
+  .tarif {
+    display: none;
+  }
+  .price-slider {
+    display: none;
+  }
 }
 .blog {
   padding-top: 10px;
@@ -593,23 +645,4 @@ ul {
     display: flex;
     justify-content: space-between;
   }
-}
-table .row-1 {
-  color: #ffffff;
-  background: #1d2631;
-}
-table .row-1 td {
-  padding: 21px 40px 15px;
-}
-table .row-1 .col-1 {
-  visibility: hidden;
-}
-table .row-1 .tarif-name {
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 700;
-}
-table td {
-  border: 1px solid #ccc;
 }
