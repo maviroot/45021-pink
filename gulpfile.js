@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 gulp.task('default', function () {
     return gulp.src('css/*.css')
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            browsers: ['last 8 versions'],
             cascade: false
         }))
         .pipe(gulp.dest('dist'));
