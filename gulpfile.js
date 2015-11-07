@@ -1,8 +1,7 @@
 var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     less = require('gulp-less'),
-    path = require('path'),
-    watch = require('gulp-watch');
+    path = require('path');
  
 gulp.task('default', function () {
     return gulp.src('css/*.css')
