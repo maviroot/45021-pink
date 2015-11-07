@@ -36,6 +36,7 @@ ul {
 @media (min-width: 1200px) {
   .wrap-inner {
     padding: 0 120px;
+    max-width: 1200px;
   }
 }
 .slider__control {
@@ -143,7 +144,8 @@ ul {
   .intro {
     display: flex;
     background: none;
-    width: 280px;
+    width: 245px;
+    padding-left: 20px;
   }
   .intro .wrap-inner {
     background: none;
@@ -153,8 +155,6 @@ ul {
     color: #ffffff;
     font-size: 40px;
     line-height: 48px;
-    padding-right: 370px;
-    padding-left: 40px;
   }
   .wrap {
     background: url("../img/iphone-6.png") calc(85%) bottom no-repeat, url("../img/header-bg.jpg") center no-repeat;
@@ -163,7 +163,8 @@ ul {
 }
 @media (min-width: 1200px) {
   .intro {
-    width: 310px;
+    padding-left: 0;
+    width: 305px;
   }
   .intro__title {
     font-size: 50px;
@@ -218,11 +219,14 @@ ul {
 }
 @media (min-width: 700px) {
   .download {
-    width: 360px;
+    width: 280px;
     padding-top: 35px;
     z-index: 2;
     background: none;
     padding-bottom: 110px;
+  }
+  .download .wrap-inner {
+    padding: 0;
   }
   .platform {
     padding-top: 45px;
@@ -235,9 +239,12 @@ ul {
 }
 @media (min-width: 1200px) {
   .download {
-    width: 550px;
+    width: 310px;
     padding-top: 0;
     padding-bottom: 130px;
+  }
+  .download .wrap-inner {
+    padding: 0;
   }
   .btn {
     padding: 14px 30px 17px;
@@ -676,26 +683,26 @@ ul {
 .effect {
   padding: 100px 0;
   display: none;
-  position: relative;
 }
 .effect__item {
   text-align: left;
   padding-left: 315px;
 }
-.effect__item:before {
+.effect__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  position: relative;
+}
+.effect__title:before {
   position: absolute;
-  left: 40px;
-  top: 55px;
+  left: calc(-327px);
+  top: -70px;
   content: " ";
   display: block;
   background: url("../img/effect-clock.png");
   width: 262px;
   height: 302px;
-}
-.effect__title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
 }
 .effect__desc {
   font-weight: 400;
@@ -714,11 +721,16 @@ ul {
   .effect {
     display: block;
     padding-bottom: 115px;
+    display: flex;
+  }
+  .effect__desc {
+    width: 300px;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 1200px) {
   .effect {
     background: #f2f2f2;
+    display: flex;
   }
   .effect__title {
     padding-bottom: 25px;
@@ -729,6 +741,7 @@ ul {
     padding-bottom: 35px;
     font-size: 18px;
     line-height: 30px;
+    width: 520px;
   }
   .effect__more {
     font-size: 18px;
