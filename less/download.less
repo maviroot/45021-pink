@@ -51,7 +51,7 @@
 
 @media (min-width:@screen_md) {
   .download {
-    padding-right: 325px;
+    width: 360px;
     padding-top: 35px;
     z-index: 2;
     background: none;
@@ -66,5 +66,31 @@
   .download__desc {
     font-size: 18px;
     line-height: 24px;
+  }
+}
+
+//  For Desktop
+
+@media (min-width:@screen_lg) {
+  .download {
+    width: 550px;
+    //padding-right: 640px;
+    padding-top: 0;
+    padding-bottom: 130px;
+  }
+  
+  .btn {
+    padding: 14px 30px 17px;
+    width: 240px;
+  }
+  
+  .btn__link {
+    font-size: 21px;
+    line-height: 18px;
+  }
+  
+  .platform {
+    padding-top: 65px;
+    padding-bottom: 65px;
   }
 }

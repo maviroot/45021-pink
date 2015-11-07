@@ -1,7 +1,7 @@
 .page-header {
   background: rgba(0, 0, 0, .3);
   padding: 21px 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 1000;
   width:100%;
@@ -31,6 +31,27 @@
   display: none;
 }
 
+.menu-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu__item {
+  padding-right: 70px;
+  
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.menu__link {
+  .nonedecoration-link();
+  color: @color--base;
+  font-size: 18px;
+  line-height: 18px;
+}
+
 //  For tablet
 
 @media (min-width: @screen_md) {
@@ -43,5 +64,23 @@
   .page-header {
     padding-top: 30px;
     padding-bottom: 40px;
+  }
+}
+
+//  For Desktop
+
+@media (min-width: @screen_lg) {
+  .logo-link {
+    background: url("../img/logo--desktop.png") 0 0 no-repeat;
+    width: 146px;
+    height: 40px;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .top-menu {
+    display: block;
   }
 }

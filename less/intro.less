@@ -21,6 +21,7 @@
   .intro {
     display: flex;
     background: none;
+    width: 280px;
 
     .wrap-inner {
     background: none;
@@ -38,6 +39,27 @@
 
   .wrap {
     background: url("../img/iphone-6.png") calc(100%-15px) bottom no-repeat,
+                url("../img/header-bg.jpg") center no-repeat;
+
+    background-size: auto, cover;
+  }
+}
+
+//  For Desktop
+
+@media (min-width:@screen_lg) {
+  .intro {
+    width: 310px;
+  }
+  
+  .intro__title {
+    //padding-right: 680px;
+    font-size: 50px;
+    padding-bottom: 65px;
+  }
+  
+  .wrap {
+    background: url("../img/intro-iphone--lg.png") calc(100% + 10px) bottom no-repeat,
                 url("../img/header-bg.jpg") center no-repeat;
 
     background-size: auto, cover;

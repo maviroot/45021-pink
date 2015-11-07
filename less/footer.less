@@ -11,6 +11,7 @@
 .call-us {
   font-size: 24px;
   padding-bottom: 40px;
+  color: @txt-color;
 }
 
 .contacts {
@@ -31,6 +32,7 @@
   font-size: 18px;
   font-weight: 700;
   padding-bottom: 9px;
+  color:@txt-color;
 }
 
 .contact__value {
@@ -110,6 +112,10 @@
   }
 }
 
+.index-footer {
+  display: none;
+}
+
 //  For Tablet
 
 @media (min-width:@screen_md) {
@@ -126,10 +132,6 @@
   
   .contacts__item {
     width: 300px;
-    
-    &:last-child {
-      
-    }
   }
   
   .page-footer {
@@ -154,6 +156,35 @@
       display: -o-flex;
       display: flex;
       justify-content: space-between;
+    }
+  }
+  
+  .index-footer {
+    display: block;
+  }
+}
+
+//  For Desktop
+
+@media (min-width:@screen_lg) {
+  .call-us {
+    font-size: 50px;
+  }
+  
+  .map {
+    height: 522px;
+  }
+  
+  .page-footer {
+    padding: 70px 0;
+  }
+  
+  .contacts__item {
+    width: 220px;
+    padding-right: 120px;
+    
+    &:last-child {
+      padding-right: 0;
     }
   }
 }

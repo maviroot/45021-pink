@@ -2,17 +2,18 @@
   padding: 100px 0;
   //width: 245px;
   display: none;
+  position: relative;
 }
 
 .effect__item {
   text-align: left;
-  padding-left: 307px;
-  position: relative;
+  padding-left: 315px;
+  //position: relative;
   
   &:before {
     position: absolute;
-    left: 0;
-    bottom: -70px;
+    left: 40px;
+    top: 55px;
     content: " ";
     display: block;
     background: url("../img/effect-clock.png");
@@ -30,6 +31,7 @@
 .effect__desc {
   font-weight: 400;
   line-height: 24px;
+  color: @txt-color;
 }
 
 .effect__more {
@@ -45,5 +47,31 @@
 @media (min-width:@screen_md) {
   .effect {
     display: block;
+    padding-bottom: 115px;
+  }
+}
+
+//  For Desktop
+
+@media (min-width:@screen_md) {
+  .effect {
+    background: @bg-color--tips;
+  }
+  
+  .effect__title {
+    padding-bottom: 25px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  
+  .effect__desc {
+    padding-bottom: 35px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  
+  .effect__more {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

@@ -28,6 +28,8 @@
   font-weight: 400;
 }
 
+//  For tablet
+
 @media (min-width:@screen_md) {
   .tips {
     padding-top: 0;
@@ -52,6 +54,86 @@
 
   .tips__item {
     text-align: left;
-    width: 310px;
+    width: 240px;
+  }
+}
+
+//  For Desktop
+
+@media (min-width:@screen_lg) {
+  .tips {
+    &:after {
+      display: none;
+    }
+    
+    .wrap-inner {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+  
+  .tips__item {
+    text-align: center;
+    padding-right: 100px;
+    padding-top: 240px;
+    
+    &:last-child {
+      padding-right: 0;
+    }
+    
+    &--black {
+      position: relative;
+      &:before {
+        position: absolute;
+        top: -100px;
+        left: -20px;
+        content: " ";
+        display: block;
+        width: 290px;
+        height: 300px;
+        background: url("../img/tips-pic--black.png") 0 0 no-repeat;
+      }
+    }
+    
+    &--color {
+      position: relative;
+      &:before {
+        position: absolute;
+        top: -100px;
+        left: -20px;
+        content: " ";
+        display: block;
+        width: 290px;
+        height: 300px;
+        background: url("../img/tips-pic--color.png") 0 0 no-repeat;
+      }
+    }
+    
+    &--smile {
+      position: relative;
+      &:before {
+        position: absolute;
+        top: -100px;
+        left: -20px;
+        content: " ";
+        display: block;
+        width: 290px;
+        height: 300px;
+        background: url("../img/tips-pic--smile.png") 0 0 no-repeat;
+      }
+    }
+  }
+  
+  .tips__title {
+    //width: 220px;
+    font-size: 30px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .tips__desc {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
