@@ -1,12 +1,8 @@
 .intro {
   padding-top: 90px;
-  background: url("../img/header-bg.jpg") center no-repeat;
-  background-size: cover;
+  
 
-  .wrap-inner {
-    background: url("../img/intro-iphone.png") no-repeat;
-    background-position: 50% bottom;
-  }
+  
 }
 
 .intro__title {
@@ -15,9 +11,25 @@
   font-size: 24px;
 }
 
+.wrap {
+  background: url("../img/header-bg.jpg") center no-repeat;
+  background-size: cover;
+  
+  &>.wrap-inner {
+    background: url("../img/intro-iphone.png") no-repeat;
+    background-position: 50% bottom;
+  }
+}
+
 //  For tablet
 
 @media (min-width:@screen_md) {
+  .wrap {
+    &>.wrap-inner {
+      background: none;
+    }
+  }
+
   .intro {
     display: flex;
     background: none;
